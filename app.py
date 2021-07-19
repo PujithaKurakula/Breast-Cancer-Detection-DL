@@ -12,7 +12,7 @@ from flask import Flask, request, redirect, url_for, send_from_directory,render_
 from keras.preprocessing import image
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
-model_path="models/model.h5"
+model_path="model/model.h5"
 model=load_model(model_path,compile=False)
 def model_predict(img_path, model):
     test_image=image.load_img(img_path,target_size=(50,50))
