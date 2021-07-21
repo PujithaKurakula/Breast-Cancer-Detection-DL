@@ -5,14 +5,14 @@ Created on Wed Jul  7 19:44:23 2021
 @author: Lenovo
 """
 
-import os
+
 from tensorflow.keras.models import load_model
 import numpy as np
-from flask import Flask, request, redirect, url_for, send_from_directory,render_template
+from flask import Flask, request, send_from_directory,render_template
 from keras.preprocessing import image
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
-model_path="models/model.h5"
+model_path="model/model.h5"
 model=load_model(model_path,compile=False)
 def model_predict(img_path, model):
     test_image=image.load_img(img_path,target_size=(50,50))

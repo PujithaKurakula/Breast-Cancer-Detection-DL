@@ -1,22 +1,15 @@
 <html>
 <head>
+<title>Breast Cancer  Detection</title>
 <style>
 *{
   margin: 0px;
   padding: 0px;
 }
-	
-html, body {
-   max-width: 100%;
-   overflow-x: hidden;
-overflow-y:hidden;
-
-}
-	
 .header {
   overflow: hidden;
-  background-color: #606060;
-  color : white;
+  background-color: white;
+  color : black;
   font-size : 20px;
   font-family : Arial;
   height: 60px;
@@ -26,7 +19,7 @@ overflow-y:hidden;
 /* Style the header links */
 .header a {
   float: left;
-  color: white;
+  color: black;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -41,25 +34,58 @@ overflow-y:hidden;
   font-weight: bold;
 }
 
-/* Change the background color on mouse-over */
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
 /* Float the link section to the right */
 .header-right {
   float: right;
 }
 
+img
+{
+    margin-top: 100px;
+	width : 40%;
+	height : 350px;
+}
+p{
+font-size : 40px;
+}
+
+html,body{
+	max-width:100%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	}
+
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (max-width: 1200px) {
+  img {
+    margin-top: 50px;
+    width:70%;
+    height: 300px;
+  }
+  p{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  img {
+    margin-top: 50px;
+    width:70%;
+  }
+  p{
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 500px) {
+  img {
+    margin-top: 50px;
+    width:90%;
+  }
+  .header {
+    height: 15%;
+  }
   .header a {
     float: none;
     display: block;
@@ -68,34 +94,33 @@ overflow-y:hidden;
   .header-right {
     float: none;
   }
+  p{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 280px) {
+
+.breast
+{
+	font-size :20px;
+
 }
 
-img
-{
-	width : 200px;
-	height : 200px;
-}
-p{
-font-size : 25px;
 }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="header">
-  <a href="#default" class="logo">Breast Cancer Detection</a>
+  <a href="#default" class="logo"><p class="breast">Breast Cancer  Detection</p></a>
+  <div class="header-right">
+  </div>
 </div>
-</br>
-</br>
-</br>
-</br></br>
-</br>
-</br>
 <center>
 <img src="{{ url_for('send_image', filename=filename) }}">
 </br>
 </br>
-<p> Patient has no Breast Cancer</p>
+<p>Person is not having Cancer </p>
 </br>
 </center>
 </body>
