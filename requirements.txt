@@ -1,4 +1,5 @@
 tensorflow==2.4.1
 flask
+numpy
 keras
 pillow
