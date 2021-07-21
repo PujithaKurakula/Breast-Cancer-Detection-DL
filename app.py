@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jul  7 19:44:23 2021
 
-@author: Lenovo
-"""
 
 
 from tensorflow.keras.models import load_model
