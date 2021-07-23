@@ -36,7 +36,7 @@
 
 /* Float the link section to the right */
 .header-right {
-  float: right;
+  float: center;
 }
 
 img
@@ -89,7 +89,7 @@ html,body{
   .header a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
   }
   .header-right {
     float: none;
@@ -119,15 +119,14 @@ body
 </head>
 <body>
 <div class="header">
-  <a href="#default" class="logo"><p class="breast">Breast Cancer  Detection</p></a>
+  <a href="#default" class="logo"><p class="breast">Oops!</p></a>
   <div class="header-right">
   </div>
 </div>
 <center>
-<img src="{{ url_for('send_image', filename=filename) }}">
 </br>
 </br>
-<p>Person is having Cancer </p>
+<p>Person has Cancer </p>
 </br>
 </center>
 </body>
